@@ -1,0 +1,292 @@
+:root {
+  --bg: #0f1514;          /* background utama */
+  --card: #161f1e;        /* card utama */
+  --surface: #1e2a28;     /* input / surface */
+
+  --primary: #5fa89a;     /* teal utama */
+  --primary-dark: #4b8f82;
+
+  --text: #e4f0ed;
+  --muted: #a6c2bc;
+
+  --success: #4fa87a;     /* hijau success */
+  --danger: #c96a6a;      /* merah warning/error */
+
+  --radius: 12px;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+/* BODY */
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: relative;
+  padding: 22px;
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  background: #111a19;
+  color: var(--primary);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* HELP ICON */
+#helpIcon {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #243532;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#helpIcon:hover {
+  background: #2f4a45;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 760px;
+  margin: 32px auto;
+  padding: 28px;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* TITLE */
+h2 {
+  margin-bottom: 22px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* LABEL */
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* SELECT */
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* ================= BUTTON ================= */
+button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  background: var(--primary-dark);
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: var(--primary);
+}
+
+/* BACK BUTTON (TEORI) */
+.theory-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  width: auto;
+  background: #243532;
+  color: var(--text);
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.theory-back-btn:hover {
+  background: #2f4a45;
+}
+
+/* ================= RESULT BOX ================= */
+.result-box {
+  margin-top: 22px;
+  padding: 18px;
+  background: #121b1a;
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* RESULT STATES */
+.result-success {
+  border-left-color: var(--success);
+  background: rgba(79, 168, 122, 0.12);
+  color: var(--success);
+}
+
+.result-warning,
+.result-error {
+  border-left-color: var(--danger);
+  background: rgba(201, 106, 106, 0.12);
+  color: var(--danger);
+}
+
+/* ================= CHARGER INFO ================= */
+#chargerInfo {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #121b1a;
+  font-weight: 600;
+}
+
+#chargerInfo.success {
+  color: var(--success);
+  border-left: 4px solid var(--success);
+}
+
+#chargerInfo.error {
+  color: var(--danger);
+  border-left: 4px solid var(--danger);
+}
+
+/* ================= THEORY PAGE ================= */
+.section-title {
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.container p {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  line-height: 1.75;
+}
+
+.container ul {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  padding-left: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.container ul li {
+  margin-bottom: 6px;
+}
+
+/* FORMULA BLOCK */
+pre {
+  margin: 12px 0;
+  padding: 14px;
+  background: #0f1817;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary);
+  color: #dff3ee;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+/* SUB HEADING */
+.container h4 {
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* ================= POPUP ================= */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease;
+  z-index: 1000;
+}
+
+.popup-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-box {
+  width: 90%;
+  max-width: 420px;
+  padding: 26px;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.popup-box h2 {
+  margin-bottom: 14px;
+  text-align: center;
+  color: var(--primary);
+}
+
+.popup-box ul {
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  .container {
+    margin: 18px;
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+}

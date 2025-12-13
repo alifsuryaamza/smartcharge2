@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teori Smart Charge Analysis</title>
+  <link rel="stylesheet" href="stylee.css" />
+</head>
+<body>
+
+  <header>Teori Smart Charge Analysis</header>
+
+  <div class="container">
+
+    <!-- BACK -->
+    <button onclick="window.location.href='indexx.html'" class="theory-back-btn">
+      ← Kembali ke Halaman Utama
+    </button>
+
+    <h2>Landasan Teori Pengisian Daya Baterai</h2>
+
+    <!-- 1 -->
+    <h3 class="section-title">1. Konsep Dasar Daya Listrik</h3>
+    <p>
+      Proses pengisian daya pada perangkat elektronik didasarkan pada hubungan antara
+      tegangan, arus, dan daya listrik. Hubungan ini dirumuskan sebagai:
+    </p>
+
+    <pre>P = V × I</pre>
+
+    <p>
+      dengan:
+      <br>• <b>P</b> = daya listrik (Watt)
+      <br>• <b>V</b> = tegangan (Volt)
+      <br>• <b>I</b> = arus listrik (Ampere)
+    </p>
+
+    <p>
+      Dalam konteks pengisian baterai, besar daya yang diterima perangkat menentukan
+      seberapa cepat energi dapat ditransfer ke dalam baterai.
+    </p>
+
+    <p>
+      Kapasitas baterai umumnya dinyatakan dalam satuan <b>mAh</b>. Untuk keperluan
+      perhitungan energi, satuan ini dikonversi menjadi <b>Wh</b> menggunakan rumus:
+    </p>
+
+    <pre>Wh = (mAh × 3.85) ÷ 1000</pre>
+
+    <p>
+      Nilai 3.85 Volt merupakan tegangan rata-rata sel baterai lithium-ion yang umum
+      digunakan pada smartphone.
+    </p>
+
+    <!-- 2 -->
+    <h3 class="section-title">2. Fase Pengisian Baterai (Charging Phases)</h3>
+    <p>
+      Proses pengisian baterai tidak berlangsung secara linear. Secara umum,
+      pengisian dibagi ke dalam tiga fase utama:
+    </p>
+
+    <ul>
+      <li>
+        <b>0–50%</b> — Fase fast charging, arus besar diberikan untuk mempercepat
+        pengisian.
+      </li>
+      <li>
+        <b>50–80%</b> — Fase tapering, arus diturunkan secara bertahap untuk
+        mengendalikan suhu dan tekanan internal baterai.
+      </li>
+      <li>
+        <b>80–100%</b> — Fase trickle charging, arus sangat kecil digunakan untuk
+        mencegah overcharge.
+      </li>
+    </ul>
+
+    <!-- 3 -->
+    <h3 class="section-title">3. Efisiensi Pengisian Daya</h3>
+    <p>
+      Tidak seluruh daya dari charger dapat disimpan menjadi energi baterai.
+      Efisiensi pengisian umumnya berada pada rentang <b>70–80%</b>.
+    </p>
+
+    <p>
+      Kehilangan energi disebabkan oleh panas, resistansi kabel,
+      serta proses konversi daya pada rangkaian manajemen baterai.
+      Oleh karena itu, perhitungan pada website ini menggunakan
+      faktor efisiensi untuk mendekati kondisi nyata.
+    </p>
+
+    <!-- 4 -->
+    <h3 class="section-title">4. Protokol Fast Charging</h3>
+    <p>
+      Untuk meningkatkan kecepatan pengisian, berbagai protokol fast charging
+      dikembangkan oleh produsen. Beberapa protokol yang umum digunakan antara lain:
+    </p>
+
+    <ul>
+      <li><b>USB Power Delivery (PD)</b></li>
+      <li><b>Quick Charge (QC)</b></li>
+      <li><b>SuperVOOC / VOOC</b></li>
+      <li><b>HyperCharge</b></li>
+      <li><b>Super Fast Charging (SFC)</b></li>
+    </ul>
+
+    <p>
+      Meskipun berbeda secara teknis, tujuan utama protokol ini adalah
+      mengatur tegangan dan arus agar pengisian berlangsung cepat
+      namun tetap aman.
+    </p>
+
+    <!-- 5 -->
+    <h3 class="section-title">5. Model Simulasi pada Website</h3>
+    <p>
+      Website <b>Smart Charge Analysis</b> menggunakan model simulasi
+      yang mendekati perilaku pengisian baterai nyata, dengan pendekatan:
+    </p>
+
+    <ul>
+      <li>Penerapan tapering setelah kapasitas baterai mencapai 50%.</li>
+      <li>Penurunan arus secara signifikan saat mendekati 100%.</li>
+      <li>Simulasi pengisian berbasis waktu (per menit).</li>
+      <li>Pembatasan daya berdasarkan kemampuan maksimum perangkat.</li>
+    </ul>
+
+    <!-- 6 -->
+    <h3 class="section-title">6. Laju Pengisian dan Konsep Turunan (dQ/dt)</h3>
+    <p>
+      Dalam fisika dan kalkulus, laju perubahan suatu besaran dinyatakan
+      menggunakan turunan. Pada pengisian baterai, laju perubahan kapasitas
+      dirumuskan sebagai:
+    </p>
+
+    <pre>dQ/dt</pre>
+
+    <p>
+      dengan:
+      <br>• <b>Q</b> = kapasitas baterai (mAh)
+      <br>• <b>t</b> = waktu (menit)
+    </p>
+
+    <p>
+      Website ini menghitung penambahan kapasitas baterai setiap interval waktu
+      dan menyajikannya dalam bentuk laju pengisian, misalnya:
+    </p>
+
+    <pre>Menit 0–5 : +850 mAh (≈17%)</pre>
+
+    <p>
+      Contoh tersebut menunjukkan bahwa dalam 5 menit, baterai bertambah
+      sekitar 850 mAh atau 17% dari total kapasitas.
+    </p>
+
+    <p>
+      Karena daya pengisian menurun setelah melewati fase fast charging,
+      nilai <b>dQ/dt</b> tidak konstan. Hal inilah yang menyebabkan
+      pengisian cepat bersifat tidak linear.
+    </p>
+
+    <ul>
+      <li><b>dQ/dt besar</b> → fase fast charging.</li>
+      <li><b>dQ/dt menurun</b> → fase tapering.</li>
+      <li><b>dQ/dt sangat kecil</b> → mendekati baterai penuh.</li>
+    </ul>
+
+    <p>
+      Dengan menampilkan laju pengisian per interval waktu,
+      pengguna dapat memahami karakteristik pengisian baterai
+      secara lebih intuitif dan ilmiah.
+    </p>
+
+  </div>
+</body>
+</html>

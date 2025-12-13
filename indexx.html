@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0f1f" />
+  <title>Smart Charge Analysis</title>
+  <link rel="stylesheet" href="stylee.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    Smart Charge Analysis
+    <span id="helpIcon" title="Cara Menggunakan Website">?</span>
+  </header>
+
+  <!-- TOP ACTION : TEORI -->
+  <div class="top-action">
+    <button class="theory-btn" onclick="window.location.href='teorii.html'">
+      <span class="icon">📘</span>
+      <span class="text">Baca Teori Pengisian</span>
+    </button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <h2>Pilih Mode & Perangkat</h2>
+
+    <label>Mode</label>
+    <select id="modeSelect">
+      <option value="fast">Fast Charging</option>
+      <option value="nonfast">Non-Fast (5W–10W)</option>
+    </select>
+
+    <label>Merk HP</label>
+    <select id="brandSelect"></select>
+
+    <label>Model HP</label>
+    <select id="modelSelect"></select>
+
+    <label>Pilih Charger</label>
+    <select id="chargerSelect"></select>
+
+    <!-- INFO CHARGER -->
+    <div id="chargerInfo"></div>
+
+    <button id="btnCalc">Hitung Waktu Pengisian</button>
+
+    <div id="resultBox" class="result-box"></div>
+    <div id="recommendBox" class="result-box"></div>
+  </div>
+
+  <!-- POPUP CARA PENGGUNAAN -->
+  <div id="popupOverlay" class="popup-overlay">
+    <div class="popup-box">
+      <h2>Cara Menggunakan Website</h2>
+      <ul>
+        <li>Pilih mode: Fast atau Non-Fast.</li>
+        <li>Pilih merk HP.</li>
+        <li>Pilih model HP.</li>
+        <li>Pilih charger yang ingin digunakan.</li>
+        <li>Tekan tombol <b>Hitung Waktu Pengisian</b>.</li>
+      </ul>
+      <button id="popupClose">Mengerti</button>
+    </div>
+  </div>
+
+  <script src="scriptt.js"></script>
+</body>
+</html>
